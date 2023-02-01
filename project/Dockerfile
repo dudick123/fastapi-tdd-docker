@@ -22,3 +22,6 @@ RUN pip install uvicorn==0.19.0
 
 # add app
 COPY . .
+
+# run the entrypoint
+CMD ["uvicorn", "app.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000", "--workers", "1"]
